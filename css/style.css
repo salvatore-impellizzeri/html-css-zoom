@@ -18,25 +18,42 @@ img{
 main{
     background-color: black;
     width: 100vw;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 60px);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 50px 30px;
+    padding: 70px 50px 20px;
 }
 
 .main-container{
     width: 100%;
-    height: 100%;
-    background-color: yellow;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    height: calc(125px * 5 + 50px);
+}
+
+.change-layout{
+    min-width: 50px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.change-layout > *{
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
 }
 
 .cam{
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 125px;
     position: relative;
-    margin-bottom: 5px;
+    margin: 0px 5px 10px;
 }
 
 .box-name{
@@ -49,7 +66,9 @@ main{
     background-color: rgba(128, 128, 128, 0.5);
 }
 
-.box-name > span{
+.box-name > span,
+.box-name > i
+{
     font-size: 15px;
 }
 
@@ -60,9 +79,51 @@ main{
 footer{
     background-color: #222222;
     width: 100vw;
-    height: 70px;
+    height: 60px;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-right,
+.footer-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    width: 25%;
+    padding: 0px 10px;
+}
+
+.footer-center{
+    height: 60px;
+    width: 50%;
+    background-color: red;
+}
+
+.icon{
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.icon > div{
+    font-size: 10px;
+}
+
+.small{
+    font-size: 10px;
+}
+
+/* HOVER */
+
+.icon:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
 }
