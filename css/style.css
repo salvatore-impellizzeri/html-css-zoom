@@ -11,6 +11,13 @@ img{
     width: 100%;
 }
 
+.icon,
+.change-layout > *,
+.cam,
+.icon-exit{
+    cursor: pointer;
+}
+
 /* 
                     MAIN 
 */
@@ -18,7 +25,7 @@ img{
 main{
     background-color: black;
     width: 100vw;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +64,7 @@ main{
 }
 
 .box-name{
-    min-width: 70px;
+    min-width: 50px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -79,7 +86,7 @@ main{
 footer{
     background-color: #222222;
     width: 100vw;
-    height: 60px;
+    height: 70px;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -89,41 +96,63 @@ footer{
 }
 
 .footer-right,
-.footer-left{
+.footer-left,
+.footer-center{
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    height: 60px;
-    width: 25%;
+    height: 70px;
     padding: 0px 10px;
 }
 
-.footer-center{
-    height: 60px;
-    width: 50%;
-    background-color: red;
+.footer-right,
+.footer-left{
+    justify-content: flex-start;
+    width: 25%;
 }
 
-.icon{
+.footer-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-center{
+    width: 50%;
+    justify-content: center;
+}
+
+.icon, .icon-exit{
     text-align: center;
     color: white;
-    font-size: 22px;
+    font-size: 25px;
     padding: 5px;
-    border-radius: 5px;
     margin: 5px;
+    border-radius: 5px;
 }
 
 .icon > div{
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .small{
-    font-size: 10px;
+    font-size: 15px;
 }
 
-/* HOVER */
+.green{
+    color: #4BC800;
+}
+
+.red{
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+
+                    /* HOVER */
 
 .icon:hover{
     background-color: rgba(255, 255, 255, 0.5);
     transition: 0.3s;
+    border-radius: 5px;
 }
